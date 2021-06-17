@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --primary-color: rgba(13,110,139,0.75);
+    --overlay-color: rgba(48,48,48,.95);
+    --menu-speed: 0.75s;
+    
+  }
+  
+  .Bridge_logo{
+    margin-left: 45px;
+    margin-top: 22px;
+    position: absolute;
+    opacity: 1;
+  }
+  body, html {
+    height: 100%;
+    font-family: 'Raleway',sans-serif;
+    line-height: 26px;
+  }
+  .sweetshop_logo{
+    animation: slide_up 1.8s ease
+    
+  }
+  /*This style Bridge logo*/
+  
+  .bg {
+    background-image: url("../images/index_background.jpg");
+    /* Full height */
+    height: 100%;
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+  }
+  
+  /*MENU*/
+  .menu-wrap {
+    position: fixed;
+    top: 10px;
+    right: 30px;
+    z-index: 1;     
+  } 
+   
+  .menu-wrap .toggler {
+    position: absolute;
+    top:0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    opacity: 0;
+  }
+  
+  .menu-wrap .hamburger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 60px; 
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  /*hamburger line*/
+  .menu-wrap .hamburger >div {
+    position:relative;
+    width: 35%;
+    height: 2px;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease ; 
+    font-size: 30p;   
+  }
+  
+  
+  
+  /* moves line down */
+  .menu-wrap .hamburger >div::before,
+  .menu-wrap .hamburger >div:after{
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: -6px;
+    width: 100%;
+    height: 2px;
+    background: inherit;
+  }
+  /* moves line down */
+  .menu-wrap .hamburger > div:after{
+    top: 6px;
+  
+  }
+  
+  /* toggler animate */
+  .menu-wrap .toggler:checked + .hamburger > div {
+    transform: rotate(135deg);
+    background-color: white;
+    
+  }
+  
+  /*turn lines into x */
+  .menu-wrap .toggler:checked + .hamburger >div:before,
+  .menu-wrap .toggler:checked + .hamburger > div:after {
+    top: 0;
+    transform: rotate(90deg);
+    
+  }
+  
+  
+  /*rotate  on hover when checked */
+  .menu-wrap .toggler:checked:hover + .hamburger >div {
+    transform: rotate(225deg);
+    background-color: #ff88ac;
+  }
+  
+  .menu-wrap .toggler:hover + .hamburger >div {
+    background-color:#ff88ac;
+  }
+  
+  /* Show menu*/
+  .menu-wrap .toggler:checked ~ .menu {
+    visibility: visible;
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div {
+    transform: scale(1);
+    transition-duration: var(--menu-speed);
+  }
+  
+  .menu-wrap .toggler:checked ~ .menu > div > div {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  
+  .menu-wrap .menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  }
+  
+  .menu-wrap .menu > div {
+    background: var(--overlay-color);
+    width: 200vw;
+    height: 200vw;
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 0.4s ease;
+  
+  }
+  .menu-wrap .menu > div > div {
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0; 
+    transition: opacity 0.4s ease;
+  
+  }
+  
+  .menu-wrap .menu > div > div > ul > li {
+    list-style: none;
+    color: #fff;
+    font-size: 24px;
+    padding: 9px;
+    text-transform: uppercase;
+    font-family: 'Raleway',sans-serif
+    ;
+  
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.4s ease-in-out;
+    
+  }
+  
+  .menu-wrap .menu > div > div > ul > li > a:hover{
+    color: #ff88ac;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

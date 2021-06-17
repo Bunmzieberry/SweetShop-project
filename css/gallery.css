@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  .first_BG_gallery{
+    background-image: url("../images/gallery_background.jpg");
+    /* Full height */
+    /* height: auto;
+    width: 100%; */
+  
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 300px;
+  }
+ 
+  .title_subtitle_holder_inner h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    position: relative;
+    font-size: 55px;
+    margin: auto;
+    font-family: 'Quicksand',sans-serif;
+    font-weight: 70;
+  }
+
+  .Experience_Yumminess{
+    z-index: 1;
+  }
